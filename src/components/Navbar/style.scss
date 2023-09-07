@@ -5,3 +5,25 @@
         padding-right: 5rem;
     }
 }
+
+nav {
+    padding: 0.5rem 6em;
+
+    .nav_item {
+        position: relative;
+        padding: 0 1em 1.5rem 1em;
+        margin: 0.5rem 0;
+        border-bottom: 1px solid #e1e1e1fa;
+
+        &:hover {
+
+            .nav_name {
+                color: rgb(203 213 225 / var(--tw-text-opacity));
+            }
+        }
+
+        .nav_name {
+            margin-left: 5px;
+        }
+    }
+}

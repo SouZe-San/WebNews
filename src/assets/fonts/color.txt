@@ -1,0 +1,11 @@
+#CDC0B0 --> hero section
+
+#F1EEE9 --> background
+#E0DDD9
+
+#CDC0B1 -> light Dark box 
+#C8C8C8 --> light box
+
+#2B2B2B --> head font
+
+#E5D5C3 --> column font

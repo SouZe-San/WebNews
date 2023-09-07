@@ -1,4 +1,6 @@
 import Hero_part from "../components/HeroSection/Hero_part";
+import Navbar from "../components/Navbar/Navbar";
+import NewsBlock from "../components/NewBlock/NewsBlock";
 
 const Home = () => {
   return (
@@ -6,9 +8,11 @@ const Home = () => {
       {/* Hero Section  */}
       <Hero_part />
       {/* NAvABar */}
-
+      <div className=" bg-slate-600 py-4">
+        <Navbar />
+      </div>
       {/* News Section */}
-      <h1>This is news</h1>
+      <NewsBlock />
     </div>
   );
 };
