@@ -11,19 +11,77 @@ nav {
 
     .nav_item {
         position: relative;
-        padding: 0 1em 1.5rem 1em;
-        margin: 0.5rem 0;
-        border-bottom: 1px solid #e1e1e1fa;
+        padding: 1.5rem 1em;
+        border-bottom: 1px solid #595959fa;
+        cursor: pointer;
 
         &:hover {
+            .nav_title {
 
-            .nav_name {
-                color: rgb(203 213 225 / var(--tw-text-opacity));
+                .nav_name {
+                    &::before {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .img_container {
+                display: block;
             }
         }
 
-        .nav_name {
-            margin-left: 5px;
+        .nav_title {
+            .navNo {
+                font-size: 2rem;
+                color: #2f2f2fb8;
+            }
+
+            .nav_name {
+                margin-left: 5px;
+                color: #2f2f2f99;
+                font-size: 4rem;
+                font-family: 'CosiAzure';
+                position: relative;
+
+                &::before {
+                    content: attr(data-text);
+                    width: 0;
+                    position: absolute;
+                    color: rgb(69, 67, 67);
+                    overflow: hidden;
+                    transition: width .5s cubic-bezier(1, -0.02, .38, .96);
+                }
+
+                &::after {
+                    content: "";
+                    width: 0%;
+                    height: 2px;
+                    position: absolute;
+                    background: rgb(68, 67, 67);
+                    overflow: hidden;
+                    bottom: 0;
+                    left: 0;
+                    transition: width 0.4s ease-in-out;
+                }
+
+                &:hover {
+                    &::after {
+                        width: 100%;
+                    }
+                }
+
+            }
         }
+
+        .img_container {
+
+            width: 260px;
+            border: 1.6px solid rgb(115, 112, 112);
+            padding: 4px;
+            // height: 300px;
+            display: none;
+            right: 0;
+        }
+
     }
 }

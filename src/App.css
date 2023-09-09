@@ -1,3 +1,27 @@
+/* Fonts Load */
+
+@font-face {
+  font-family: "CosiAzure";
+  src: url(./assets/fonts/CosiAzure-Bold.woff) format("woff");
+}
+@font-face {
+  font-family: "Hoggy";
+  src: url(./assets/fonts/Hoogy-_Demo_.woff) format("woff");
+}
+@font-face {
+  font-family: "NeueMontreal_bold";
+  src: url(./assets/fonts/NeueMontreal-Bold.woff) format("woff");
+}
+
+@font-face {
+  font-family: "NeueMontreal_regular";
+  src: url(./assets/fonts/NeueMontreal-Regular.woff) format("woff");
+}
+@font-face {
+  font-family: "NeueMontreal_medium";
+  src: url(./assets/fonts/NeueMontreal-Medium.woff) format("woff");
+}
+
 .btn {
   outline: none;
   border: 0.5px solid black;
@@ -5,3 +29,15 @@
   padding: 5px 8px;
   border-radius: 10px;
 }
+
+/* 
+#CDC0B0 --> hero section
+
+#F1EEE9 --> background
+#E0DDD9
+
+#CDC0B1 -> light Dark box 
+#C8C8C8 --> light box
+
+#2B2B2B --> head font
+ */
