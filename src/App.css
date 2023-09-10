@@ -5,21 +5,8 @@
   src: url(./assets/fonts/CosiAzure-Bold.woff) format("woff");
 }
 @font-face {
-  font-family: "Hoggy";
-  src: url(./assets/fonts/Hoogy-_Demo_.woff) format("woff");
-}
-@font-face {
-  font-family: "NeueMontreal_bold";
-  src: url(./assets/fonts/NeueMontreal-Bold.woff) format("woff");
-}
-
-@font-face {
-  font-family: "NeueMontreal_regular";
-  src: url(./assets/fonts/NeueMontreal-Regular.woff) format("woff");
-}
-@font-face {
-  font-family: "NeueMontreal_medium";
-  src: url(./assets/fonts/NeueMontreal-Medium.woff) format("woff");
+  font-family: "mogen";
+  src: url(./assets/fonts/MogenRegular-MVvOn.woff) format("woff");
 }
 
 .btn {

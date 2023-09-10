@@ -5,11 +5,11 @@ import "./Hero_part_style.scss";
 
 const Hero_part = () => {
   return (
-    <section className="hero_section">
+    <section className="hero_section md:h-[98vh]">
       {/* Logo Section  */}
       <Header_sec />
       {/* Headline */}
-      <h1 className="headLine text-center h-[50px]">Todays T0p</h1>
+      <div className="headLine text-center h-[50px]">Todays Top</div>
       {/* TOp 3 news */}
       <TopNews />
     </section>

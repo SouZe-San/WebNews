@@ -34,10 +34,10 @@ const Navbar = () => {
               </Link>
               <MotionAnimation index={index} navigationBox={navigationBox}>
                 <div className="img_container absolute">
-                  <img src={nav_assets[index]} alt="" ref={imgRef} />
+                  <img src={nav_assets[index]} alt="" ref={imgRef} loading="lazy" />
                 </div>
               </MotionAnimation>
-              <div className="arrow">
+              <div className="arrow  sm:block hidden">
                 <img src={arrow} alt="arrow" />
               </div>
             </div>

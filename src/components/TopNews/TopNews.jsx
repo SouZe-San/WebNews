@@ -61,16 +61,16 @@ const TopNews = () => {
   ];
   return (
     <div className="w-full py-4 px-16 h-[70%]">
-      <div className="container flex ">
+      <div className="CONcontainer flex md:flex-row flex-col">
         <div className="new_item1 item">
-          <NewsItem imageUrl={imgUrl[0]} news={data[0]} />
+          <NewsItem imageUrl={imgUrl[0]} news={data[0]} titleFont={"2rem"} />
         </div>
-        <div className="second_container flex flex-col">
+        <div className="second_container flex md:flex-col flex-row">
           <div className="new_item2 item">
-            <NewsItem imageUrl={imgUrl[1]} news={data[1]} />
+            <NewsItem imageUrl={imgUrl[1]} news={data[1]} titleFont={"15px"} />
           </div>
           <div className="new_item2 item">
-            <NewsItem imageUrl={imgUrl[2]} news={data[2]} />
+            <NewsItem imageUrl={imgUrl[2]} news={data[2]} titleFont={"15px"} />
           </div>
         </div>
       </div>

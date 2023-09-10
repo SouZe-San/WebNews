@@ -1,12 +1,8 @@
-.container {
+.CONcontainer {
     height: 100%;
     justify-content: center;
     scale: 1.08;
 
-    // .item {
-
-    //     border: 1px solid black;
-    // }
 
     .new_item1 {
         height: inherit;
@@ -21,6 +17,48 @@
 
         .new_item2 {
             height: 50%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .CONcontainer {
+        gap: 1rem;
+
+        .new_item1 {
+            width: 100%;
+            padding: 0;
+        }
+
+        .second_container {
+            width: 100%;
+
+
+            .new_item2 {
+                height: auto;
+                width: 50%;
+                aspect-ratio: 16/9;
+
+                .card {
+                    &:hover {
+                        .newsDetails {
+                            a {
+                                top: 0;
+                            }
+                        }
+                    }
+
+                    .newsDetails {
+                        a {
+                            top: 2rem;
+
+                            .news_title {
+                                font-size: 11px !important;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
