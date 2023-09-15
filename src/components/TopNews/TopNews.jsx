@@ -1,4 +1,5 @@
-// import React from 'react'
+import { useEffect, useState } from "react";
+import { gsap } from "gsap";
 import NewsItem from "./newsIteam/NewsItem";
 import "./style.scss";
 
@@ -59,13 +60,65 @@ const TopNews = () => {
     "https://www.cnet.com/a/img/resize/4a9c6f313b21bfb6804840af8933b7662862dc02/hub/2023/09/01/cb655e64-2e19-4d7b-9e07-af6711c77689/gettyimages-1060038616.jpg?auto=webp&fit=crop&height=675&width=1200",
     "https://c.biztoc.com/p/63955db5010732ea/s.webp",
   ];
+
+  const [heigh, setHeigh] = useState("50%");
+
+  useEffect(() => {
+    if (window.innerWidth <= 760) {
+      setHeigh("100%");
+    }
+    console.log(heigh);
+
+    gsap.fromTo(
+      ".new_item1",
+      {
+        scale: 0,
+        opacity: 0,
+      },
+      {
+        duration: 0.8,
+        scale: 1,
+        opacity: 1,
+        ease: "power2",
+      }
+    );
+    gsap.fromTo(
+      ".new_item2",
+      {
+        height: 0,
+        opacity: 0,
+      },
+      {
+        duration: 1,
+        height: heigh,
+        opacity: 1,
+        ease: "power2",
+        delay: 0.7,
+      }
+    );
+  }, [heigh]);
+
+  // const tl1 = gsap.timeline({paused: true});
+
+  // const vanish = () => {
+  //   tl1.to(".new_item1",{
+  //       duration: 0.8,
+  //       x:-1000,
+
+  //     })
+  // }
+
+  // const onRightClick = () => {
+  //   tl1.play();
+  // }
+
   return (
-    <div className="w-full py-4 px-16 h-[70%]">
+    <div className="w-full py-4 px-16 h-full absolute">
       <div className="CONcontainer flex md:flex-row flex-col">
         <div className="new_item1 item">
           <NewsItem imageUrl={imgUrl[0]} news={data[0]} titleFont={"2rem"} />
         </div>
-        <div className="second_container flex md:flex-col flex-row">
+        <div className="second_container flex md:flex-col flex-row md:pr-4">
           <div className="new_item2 item">
             <NewsItem imageUrl={imgUrl[1]} news={data[1]} titleFont={"15px"} />
           </div>

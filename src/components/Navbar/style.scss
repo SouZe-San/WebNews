@@ -160,3 +160,12 @@ nav {
         }
     }
 }
+
+@media (min-width: 1280px) {
+    nav {
+        .img_container {
+            width: 330px;
+        }
+    }
+
+}

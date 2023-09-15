@@ -53,8 +53,46 @@
                             top: 2rem;
 
                             .news_title {
-                                font-size: 11px !important;
+                                font-size: 13px !important;
                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 420px) {
+
+    .CONcontainer {
+
+        .new_item1 {
+            width: 100%;
+            aspect-ratio: 16/8;
+
+        }
+
+
+        .second_container {
+            .new_item2 {
+                height: 100% !important;
+
+                .card {
+                    &:hover {
+                        .newsDetails {
+                            a {
+                                top: 0;
+                            }
+                        }
+                    }
+
+                    .newsDetails {
+                        margin: 0.5rem 1em 1em 2em;
+
+                        a {
+                            top: 5rem;
                         }
                     }
                 }
