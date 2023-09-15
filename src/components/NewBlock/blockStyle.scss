@@ -1,0 +1,16 @@
+.NewsContainer {
+    width: 100%;
+    grid-template-rows: repeat(6, minmax(0, 1fr));
+}
+
+@media (max-width :760px) {
+    .NewsContainer {
+        grid-template-rows: repeat(10, minmax(0, 1fr));
+    }
+}
+
+@media (max-width :430px) {
+    .NewsContainer {
+        grid-auto-flow: dense;
+    }
+}

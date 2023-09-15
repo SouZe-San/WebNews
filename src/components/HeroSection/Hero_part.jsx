@@ -6,7 +6,6 @@ import { gsap } from "gsap";
 
 const Hero_part = () => {
   useEffect(() => {
-    console.log("Hero_part");
     gsap.to(".spanName", {
       duration: 1,
       scale: 1,

@@ -67,7 +67,6 @@ const TopNews = () => {
     if (window.innerWidth <= 760) {
       setHeigh("100%");
     }
-    console.log(heigh);
 
     gsap.fromTo(
       ".new_item1",
