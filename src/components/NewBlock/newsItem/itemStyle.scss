@@ -1,0 +1,90 @@
+@import 'atropos/scss';
+
+.mainItemDiv {
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+    border-radius: 5px;
+    transform: perspective(1000px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg);
+
+    &:hover {
+        background: rgba(229, 225, 225, 0.56) !important;
+        box-shadow: 0px 16px 26px -25px #000000e0, 0px 0px 17px -8px #69686873;
+
+        .sourceTag {
+            div {
+                span {
+                    color: #000000;
+
+                    svg {
+                        path {
+                            fill: #2e2e2e;
+                        }
+                    }
+                }
+            }
+        }
+
+        .card-title {
+            color: #0f0f0f;
+        }
+
+
+    }
+
+    .sourceTag {
+        padding: 10px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+        // transform: scale(0);
+        transition: all 0.3s;
+        word-spacing: -1px;
+
+        div {
+            align-items: flex-end;
+            font-size: 10px;
+
+            span {
+                margin-left: -3px;
+
+                svg {
+                    width: 20px;
+                    position: relative;
+                    bottom: 2px;
+
+                    path {
+                        fill: #aaa9a6
+                    }
+                }
+            }
+        }
+    }
+
+    img {
+        scale: 0.97;
+        aspect-ratio: 3/2;
+        // h-[16rem]
+    }
+
+    .card-body {
+        padding-left: 1rem;
+        padding-right: 1.5rem;
+
+        .card-title {
+            font-weight: 600;
+            font-size: 1.4rem;
+            line-height: 1.5rem;
+            color: #2B2B2B;
+        }
+
+        .card-description {
+            line-height: 1.2rem;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.atropos-shadow {
+    background: #c8c7c700 !important;
+    // background: transparent !important;
+}

@@ -8,11 +8,14 @@ const Home = () => {
       {/* Hero Section  */}
       <Hero_part />
       {/* NAvABar */}
-      <div className="Navigation_section py-6">
+      <section className="Navigation_section py-6">
         <Navbar />
-      </div>
+      </section>
       {/* News Section */}
-      <NewsBlock />
+      <section className="NewsSection">
+        <h1 className="w-full text-center newsHead">TechNology</h1>
+        <NewsBlock />
+      </section>
     </div>
   );
 };
