@@ -1,35 +1,48 @@
 @import 'atropos/scss';
 
+
+.my-atropos {
+    &:hover {
+
+        .atropos-rotate {
+            border-radius: 10px;
+            box-shadow: 0px 21px 33px -31px rgba(0, 0, 0, 0.24), 0px 0px 1px -8px rgba(105, 104, 104, 0.38);
+            background: rgba(229, 225, 225, 0.56) !important;
+            // background: rgba(206, 200, 200, 0.08) !important;
+
+            .mainItemDiv {
+                .sourceTag {
+                    div {
+                        color: #2e2e2e;
+                        // font-weight: 600;
+
+                        span {
+
+                            svg {
+                                path {
+                                    fill: #2e2e2e;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .card-title {
+                color: #0f0f0f;
+            }
+
+        }
+    }
+}
+
 .mainItemDiv {
     transition: all 0.3s ease-in;
     cursor: pointer;
     border-radius: 5px;
     transform: perspective(1000px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg);
 
-    &:hover {
-        background: rgba(229, 225, 225, 0.56) !important;
-        box-shadow: 0px 16px 26px -25px #000000e0, 0px 0px 17px -8px #69686873;
 
-        .sourceTag {
-            div {
-                span {
-                    color: #000000;
-
-                    svg {
-                        path {
-                            fill: #2e2e2e;
-                        }
-                    }
-                }
-            }
-        }
-
-        .card-title {
-            color: #0f0f0f;
-        }
-
-
-    }
 
     .sourceTag {
         padding: 10px;

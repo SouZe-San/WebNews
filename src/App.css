@@ -1,5 +1,5 @@
 /* Fonts Load */
-
+@import url("https://fonts.googleapis.com/css2?family=Marmelad&display=swap");
 @font-face {
   font-family: "CosiAzure";
   src: url(./assets/fonts/CosiAzure-Bold.woff) format("woff");
