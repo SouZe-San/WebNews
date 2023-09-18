@@ -1,10 +1,21 @@
 import { useEffect } from "react";
-import Header_sec from "../Header_section/Header_sec";
-import TopNews from "../TopNews/TopNews";
-import "./Hero_part_style.scss";
+
 import { gsap } from "gsap";
 
+import { useSelector, useDispatch } from "react-redux";
+import { forward, backward } from "../../redux/features/currentSlideSlice";
+
+// Importing Components
+import Header_sec from "../Header_section/Header_sec";
+import TopNews from "../TopNews/TopNews";
+
+// Importing Styles
+import "./Hero_part_style.scss";
+
 const Hero_part = () => {
+  const { current } = useSelector((state) => state.currentSlider);
+  const dispatch = useDispatch();
+
   useEffect(() => {
     gsap.to(".spanName", {
       duration: 1,
@@ -19,6 +30,9 @@ const Hero_part = () => {
     });
   }, []);
 
+  useEffect(() => {
+    console.log(current);
+  }, [current]);
   return (
     <section className="hero_section md:h-[98vh]">
       {/* Logo Section  */}
@@ -37,17 +51,18 @@ const Hero_part = () => {
       {/* TOp 3 news */}
 
       <div className="TopNewSection  h-[70%] flex relative">
-        <div id="leftArrow" className="sliderArrow">
+        {/* //!LEFT ARROW  */}
+        <div id="leftArrow" className="sliderArrow" onClick={() => dispatch(backward())}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path d="M8 12L14 6V18L8 12Z" fill="rgba(95,94,94,1)"></path>
           </svg>
         </div>
 
-        <TopNews />
-        <TopNews />
+        {/* //^ NEWS  */}
         <TopNews />
 
-        <div className="sliderArrow" id="rightArrow">
+        {/* //!RIGHT ARROW  */}
+        <div className="sliderArrow" id="rightArrow" onClick={() => dispatch(forward())}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path d="M16 12L10 18V6L16 12Z" fill="rgba(113,113,113,1)"></path>
           </svg>
