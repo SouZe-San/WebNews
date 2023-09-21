@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import { gsap } from "gsap";
 
@@ -12,10 +12,16 @@ import TopNews from "../TopNews/TopNews";
 // Importing Styles
 import "./Hero_part_style.scss";
 
+// Import TOP news Data
+import { topNewsCollection } from "../../content/newsCollection.js";
+
 const Hero_part = () => {
   const { current } = useSelector((state) => state.currentSlider);
   const dispatch = useDispatch();
+  const [isClick, setIsClick] = useState(false);
+  const [TopNewsData, setTopNewsData] = useState(topNewsCollection[0].newsData);
 
+  // For Reveling Animation
   useEffect(() => {
     gsap.to(".spanName", {
       duration: 1,
@@ -30,9 +36,16 @@ const Hero_part = () => {
     });
   }, []);
 
+  // Change News data on slide Change
   useEffect(() => {
-    console.log(current);
-  }, [current]);
+    const currentObj = topNewsCollection[current];
+    const topNewsData = currentObj.newsData;
+    setTimeout(() => {
+      setTopNewsData(topNewsData);
+    }, 500);
+    console.log(topNewsData);
+  }, [current, TopNewsData]);
+
   return (
     <section className="hero_section md:h-[98vh]">
       {/* Logo Section  */}
@@ -52,17 +65,31 @@ const Hero_part = () => {
 
       <div className="TopNewSection  h-[70%] flex relative">
         {/* //!LEFT ARROW  */}
-        <div id="leftArrow" className="sliderArrow" onClick={() => dispatch(backward())}>
+        <div
+          id="leftArrow"
+          className="sliderArrow"
+          onClick={() => {
+            dispatch(backward());
+            setIsClick(true);
+          }}
+        >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path d="M8 12L14 6V18L8 12Z" fill="rgba(95,94,94,1)"></path>
           </svg>
         </div>
 
         {/* //^ NEWS  */}
-        <TopNews />
+        <TopNews isClick={isClick} setIsClick={setIsClick} newsData={TopNewsData} />
 
         {/* //!RIGHT ARROW  */}
-        <div className="sliderArrow" id="rightArrow" onClick={() => dispatch(forward())}>
+        <div
+          className="sliderArrow"
+          id="rightArrow"
+          onClick={() => {
+            dispatch(forward());
+            setIsClick(true);
+          }}
+        >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path d="M16 12L10 18V6L16 12Z" fill="rgba(113,113,113,1)"></path>
           </svg>
@@ -71,6 +98,7 @@ const Hero_part = () => {
 
       <div className="NewsNav flex w-full justify-center">
         {" "}
+        {/* Run A map function with index and put desiredFunction(index) and isClickTrue */}
         <div className="circle h-4 aspect-square rounded bg-slate-400"></div>
         <div className="circle h-4 aspect-square rounded bg-slate-400"></div>
         <div className="circle h-4 aspect-square rounded bg-slate-400"></div>

@@ -9,7 +9,7 @@ export const currentSlideSlice = createSlice({
   initialState,
   reducers: {
     forward: (state) => {
-      if (state.current === 4) {
+      if (state.current === 3) {
         state.current = 0;
         return;
       }
@@ -17,7 +17,7 @@ export const currentSlideSlice = createSlice({
     },
     backward: (state) => {
       if (state.current === 0) {
-        state.current = 4;
+        state.current = 3;
         return;
       }
       state.current -= 1;

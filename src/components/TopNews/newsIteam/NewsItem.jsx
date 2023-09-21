@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 // import React from 'react'
 import "./news_style.scss";
-const NewsItem = ({ imageUrl, news, titleFont }) => {
+const NewsItem = ({ news, titleFont }) => {
   return (
     <div className="card ">
-      <img src={imageUrl} alt="" />
+      <img src={news.urlToImage} alt="" />
 
       <div className="newsDetails">
         <a href={news.url} className="no-underline h-full">
