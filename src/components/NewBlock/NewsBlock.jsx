@@ -14,7 +14,9 @@ const NewsBlock = ({ category }) => {
   const { newsTitle } = useSelector((state) => state.newsChanger);
   // eslint-disable-next-line no-unused-vars
   const [totalResults, setTotalResults] = useState(0); // this store the total number of articles
-  const URL = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=27e6a013940a491f87cfa8e0b063400b&pageSize=${pageSize}&page=${page}`;
+  const URL = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${
+    import.meta.env.VITE_DARK_NEWS_API_KEY
+  }&pageSize=${pageSize}&page=${page}`;
 
   //^  Function For fetching Data from API ------
   // eslint-disable-next-line no-unused-vars
@@ -27,9 +29,9 @@ const NewsBlock = ({ category }) => {
   };
 
   const fetchMoreData = async () => {
-    const URL = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=27e6a013940a491f87cfa8e0b063400b&pageSize=${pageSize}&page=${
-      page + 1
-    }`;
+    const URL = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${
+      import.meta.env.VITE_DARK_NEWS_API_KEY
+    }&pageSize=${pageSize}&page=${page + 1}`;
     const data = await fetch(URL);
     setPage((prev) => prev + 1); ///Add +1 With prev page number ... by this we can get the data which are available in next..
     const parsedData = await data.json();
