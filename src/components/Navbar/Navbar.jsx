@@ -41,7 +41,7 @@ const Navbar = ({ newsRef }) => {
           return (
             <div className="nav_item flex text-[3rem] items-center justify-between" key={index}>
               <Link
-                to={`/${item}`}
+                to={`/${item === "General" ? "" : item}`}
                 className="nav_title flex items-center"
                 onClick={() => handleScroll(item)}
               >
