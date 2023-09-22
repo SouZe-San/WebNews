@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { gsap } from "gsap";
 
 import { useSelector, useDispatch } from "react-redux";
-import { forward, backward } from "../../redux/features/currentSlideSlice";
+import { forward, backward, desireSlide } from "../../redux/features/currentSlideSlice";
 
 // Importing Components
 import Header_sec from "../Header_section/Header_sec";
@@ -21,7 +21,7 @@ const Hero_part = () => {
   const [isClick, setIsClick] = useState(false);
   const [TopNewsData, setTopNewsData] = useState(topNewsCollection[0].newsData);
 
-  // For Reveling Animation
+  // Headline Reveling Animation
   useEffect(() => {
     gsap.to(".spanName", {
       duration: 1,
@@ -45,6 +45,8 @@ const Hero_part = () => {
     }, 500);
     console.log(topNewsData);
   }, [current, TopNewsData]);
+
+  const slideArray = ["slide1", "slide2", "slide3", "slide4"];
 
   return (
     <section className="hero_section md:h-[98vh]">
@@ -96,13 +98,22 @@ const Hero_part = () => {
         </div>
       </div>
 
+      {/*  Down Slide monitoring */}
       <div className="NewsNav flex w-full justify-center">
-        {" "}
-        {/* Run A map function with index and put desiredFunction(index) and isClickTrue */}
-        <div className="circle h-4 aspect-square rounded bg-slate-400"></div>
-        <div className="circle h-4 aspect-square rounded bg-slate-400"></div>
-        <div className="circle h-4 aspect-square rounded bg-slate-400"></div>
-        <div className="circle h-4 aspect-square rounded bg-slate-400"></div>
+        {slideArray.map((index) => {
+          return (
+            <div
+              key={index}
+              className={`circle h-3 aspect-square rounded-full bg-stone-400 ${
+                current === index ? "bg-stone-900" : ""
+              }`}
+              onClick={() => {
+                dispatch(desireSlide(index));
+                setIsClick(true);
+              }}
+            ></div>
+          );
+        })}
       </div>
     </section>
   );
