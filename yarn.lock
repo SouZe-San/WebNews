@@ -848,6 +848,11 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
+dotenv@^16.3.1:
+  version "16.3.1"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.3.1.tgz#369034de7d7e5b120972693352a3bf112172cc3e"
+  integrity sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==
+
 electron-to-chromium@^1.4.477:
   version "1.4.494"
   resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.494.tgz"
@@ -1991,7 +1996,7 @@ react-dom@^18.2.0:
 
 react-infinite-scroll-component@^6.1.0:
   version "6.1.0"
-  resolved "https://registry.npmjs.org/react-infinite-scroll-component/-/react-infinite-scroll-component-6.1.0.tgz"
+  resolved "https://registry.yarnpkg.com/react-infinite-scroll-component/-/react-infinite-scroll-component-6.1.0.tgz#7e511e7aa0f728ac3e51f64a38a6079ac522407f"
   integrity sha512-SQu5nCqy8DxQWpnUVLx7V7b7LcA37aM7tvoWjTLZp1dk6EJibM5/4EJKzOnl07/BsM1Y40sKLuqjCwwH/xV0TQ==
   dependencies:
     throttle-debounce "^2.1.0"

@@ -14,15 +14,18 @@
                 .sourceTag {
                     div {
                         color: #2e2e2e;
+
                         // font-weight: 600;
+                        a {
+                            span {
 
-                        span {
-
-                            svg {
-                                path {
-                                    fill: #2e2e2e;
+                                svg {
+                                    path {
+                                        fill: #2e2e2e;
+                                    }
                                 }
                             }
+
                         }
                     }
                 }
@@ -56,18 +59,21 @@
             align-items: flex-end;
             font-size: 10px;
 
-            span {
-                margin-left: -3px;
+            a {
+                span {
+                    margin-left: -3px;
 
-                svg {
-                    width: 20px;
-                    position: relative;
-                    bottom: 2px;
+                    svg {
+                        width: 20px;
+                        position: relative;
+                        bottom: 2px;
 
-                    path {
-                        fill: #aaa9a6
+                        path {
+                            fill: #aaa9a6
+                        }
                     }
                 }
+
             }
         }
     }

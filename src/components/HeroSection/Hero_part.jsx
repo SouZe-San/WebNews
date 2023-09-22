@@ -43,7 +43,6 @@ const Hero_part = () => {
     setTimeout(() => {
       setTopNewsData(topNewsData);
     }, 500);
-    console.log(topNewsData);
   }, [current, TopNewsData]);
 
   const slideArray = ["slide1", "slide2", "slide3", "slide4"];
