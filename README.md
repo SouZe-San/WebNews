@@ -19,13 +19,12 @@ APIs: News API
 To get started with this project, follow these steps:
 
 - Clone this repository onto your local machine.
-
-```
-    yarn add
-
-```
-
 - Install the necessary dependencies.
 - Create a .env file with your News API credentials.
 - Start the development server by running
-  `yarn dev`
+
+```
+    yarn add
+    yarn dev
+
+```
