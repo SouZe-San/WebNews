@@ -23,6 +23,7 @@ export const currentSlideSlice = createSlice({
       state.current -= 1;
     },
     desireSlide: (state, action) => {
+      console.log(action.payload);
       state.current = action.payload;
     },
   },

@@ -99,7 +99,7 @@ const Hero_part = () => {
 
       {/*  Down Slide monitoring */}
       <div className="NewsNav flex w-full justify-center">
-        {slideArray.map((index) => {
+        {slideArray.map((slide, index) => {
           return (
             <div
               key={index}
@@ -107,6 +107,7 @@ const Hero_part = () => {
                 current === index ? "bg-stone-900" : ""
               }`}
               onClick={() => {
+                console.log(index);
                 dispatch(desireSlide(index));
                 setIsClick(true);
               }}

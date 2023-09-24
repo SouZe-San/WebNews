@@ -12,16 +12,14 @@ const NewsBlock = ({ category }) => {
   const pageSize = 9; // Use for Set that at one time Only 9 news Item will come
   const [page, setPage] = useState(1); // Use for Set that at one time Only 9 news Item will come
   const { newsTitle } = useSelector((state) => state.newsChanger);
-  // eslint-disable-next-line no-unused-vars
+
   const [totalResults, setTotalResults] = useState(0); // this store the total number of articles
   const URL = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${
     import.meta.env.VITE_DARK_NEWS_API_KEY
   }&pageSize=${pageSize}&page=${page}`;
 
   //^  Function For fetching Data from API ------
-  // eslint-disable-next-line no-unused-vars
   const DataFetch = async () => {
-    console.log("Fetching Data From API");
     const data = await fetch(URL); // --> Waiting for fetching data form api through the url
     const parsedData = await data.json(); // ---> convert json to array
     setArticles(parsedData.articles);
