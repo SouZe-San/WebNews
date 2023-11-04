@@ -30,5 +30,7 @@ To get started with this project, follow these steps:
 
 ```
 
+# _**One Glance On UI**_ -
+
 ![webNews-page](https://github.com/SouZe-San/WebNews/assets/103335953/bf8f53d3-5f99-4042-889f-9f752cf2e7f3)
 
