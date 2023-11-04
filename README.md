@@ -6,13 +6,13 @@ This is a simple looking page where you can get all type of daily news. I have u
 
 ## _Features_
 
-- 1: Style Looking Page
-- 2: Get all Type of Daily News Here
+1. Style Looking Page
+2. Get all Type of Daily News Here
 
 ## _Technologies Used_
 
-Front-end: React, Tailwind css, gsap
-APIs: News API
+- Front-end: React, Tailwind css, scss,  gsap
+- APIs: News API
 
 ## _**Getting Started**_
 
@@ -24,6 +24,7 @@ To get started with this project, follow these steps:
 - Start the development server by running
 
 ```
+
     yarn add
     yarn dev
 
