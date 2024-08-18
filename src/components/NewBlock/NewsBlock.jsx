@@ -24,7 +24,6 @@ const NewsBlock = ({ category }) => {
     const parsedData = await data.json(); // ---> convert json to array
     setArticles(parsedData.articles);
     setTotalResults(parsedData.totalResults);
-    console.log(category, articles);
   };
 
   const fetchMoreData = async () => {
@@ -40,7 +39,6 @@ const NewsBlock = ({ category }) => {
 
   useEffect(() => {
     DataFetch();
-    console.log(articles);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [newsTitle]);
 
