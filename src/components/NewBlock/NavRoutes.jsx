@@ -4,7 +4,7 @@ const NavRoutes = () => {
   return (
     <Routes>
       <Route exact path="/" element={<NewsBlock key="general" category="general" />} />
-      <Route exact path="/sports" element={<NewsBlock key="sports" category="Sport " />} />
+      <Route exact path="/sports" element={<NewsBlock key="sports" category="sports" />} />
       <Route exact path="/science" element={<NewsBlock key="science" category="Science" />} />
       <Route exact path="/Business" element={<NewsBlock key="business" category="business" />} />
       <Route

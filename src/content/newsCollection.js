@@ -21,18 +21,18 @@ export const topNewsCollection = [
       {
         source: {
           id: 1.2,
-          name: "Biztoc.com",
+          name: "Thomas Ricker",
         },
-        author: "benzinga.com",
-        title:
-          "Benzinga Bulls And Bears: Apple, Tesla, Nvidia, And Dogecoin May Spike 150% Contingent On Musk's Next Move",
+        author: "Thomas Ricker",
+        title: "iPhone 16: all the leaks and rumors about Apples next smartphone",
         description:
-          "Benzinga examined the prospects for many investors' favorite stocks over the last week — here's a look at some of our top stories. The Dow Jones and the Nasdaq Composite had their best weeks since July, with increases of 1.4% and 3.3% respectively, while the …",
-        url: "https://biztoc.com/x/63955db5010732ea",
-        urlToImage: "https://c.biztoc.com/p/63955db5010732ea/s.webp",
-        publishedAt: "2023-09-02T14:08:10Z",
+          "Leaks so far have suggested a new pressure-sensitive camera button and bigger screens for the iPhone 16 Pro and a redesigned camera bump for the standard iPhone 16.",
+        url: "https://www.theverge.com/2024/8/17/24222355/iphone-16-rumors-leaks-cameras",
+        urlToImage:
+          "https://cdn.vox-cdn.com/thumbor/RM-r7K1gVA9oSVC5uSkgJo2d_Sw=/0x0:2040x1360/1200x628/filters:focal(1020x680:1021x681)/cdn.vox-cdn.com/uploads/chorus_asset/file/24931969/236794_iPhone_15_pro_pro_Max_VPavic_0011.jpg",
+        publishedAt: "2024-08-17T14:14:33Z",
         content:
-          "Benzinga examined the prospects for many investors' favorite stocks over the last week here's a look at some of our top stories.The Dow Jones and the Nasdaq Composite had their best weeks since July,… [+318 chars]",
+          "Apple should be spinning up the iPhone 16 line soon, and while rumors about its phones dont tend to leak like certainotherphonesI know, some details have trickled out of the halls of Cupertino and it… [+3351 chars]",
       },
       {
         source: {

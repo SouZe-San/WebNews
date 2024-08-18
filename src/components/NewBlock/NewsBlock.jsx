@@ -24,6 +24,7 @@ const NewsBlock = ({ category }) => {
     const parsedData = await data.json(); // ---> convert json to array
     setArticles(parsedData.articles);
     setTotalResults(parsedData.totalResults);
+    console.log(category, articles);
   };
 
   const fetchMoreData = async () => {
@@ -39,8 +40,17 @@ const NewsBlock = ({ category }) => {
 
   useEffect(() => {
     DataFetch();
+    console.log(articles);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [newsTitle]);
+
+  if (articles.length === 0) {
+    return (
+      <h1 className="text-5xl">
+        <span className="text-8xl "> Sorry T_T </span> No News Found for this Category
+      </h1>
+    );
+  }
 
   return (
     <>

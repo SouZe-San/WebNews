@@ -22,7 +22,7 @@ import img6 from "../../assets/navAssets/entertainment/colorFest.webp";
 
 const Navbar = ({ newsRef }) => {
   const dispatch = useDispatch();
-  const nav_items = ["Sport", "General", "Science", "Business", "Technology", "Entertainment"];
+  const nav_items = ["Sports", "General", "Science", "Business", "Technology", "Entertainment"];
   const nav_assets = [img2, img1, img3, img4, img5, img6];
 
   const navigationBox = useRef(null);
@@ -30,7 +30,6 @@ const Navbar = ({ newsRef }) => {
 
   const handleScroll = (item) => {
     newsRef.current.scrollIntoView({ behavior: "smooth" });
-    console.log(item);
     dispatch(titleChanger(item));
   };
 
