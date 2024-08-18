@@ -6,14 +6,15 @@ import { setUser, setClicked } from "../../redux/features/authenticationSlice";
 
 const LogIn = () => {
   const { isClicked } = useSelector((state) => state.authentication);
-  const [email, setEmail] = useState("");
+  // const [email, setEmail] = useState("");
   const dispatch = useDispatch();
 
   const handelSubmit = () => {
-    if (email.trim() === "") return;
-    dispatch(setUser(email));
+    // if (email.trim() === "") return;
+    alert(" Not Implemented");
+    dispatch(setUser("User@gmail.com"));
     dispatch(setClicked());
-    setEmail("");
+    // setEmail("");
   };
 
   return (
@@ -24,9 +25,7 @@ const LogIn = () => {
             className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
             id="username"
             type="email"
-            value={email}
             placeholder="E-mail"
-            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div className="mb-6">
