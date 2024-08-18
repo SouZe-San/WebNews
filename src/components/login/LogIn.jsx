@@ -11,7 +11,7 @@ const LogIn = () => {
 
   const handelSubmit = (e) => {
     e.preventDefault();
-    if (email === "") return;
+    if (email.trim() === "") return;
     dispatch(setUser(email));
     dispatch(setClicked());
     setEmail("");
@@ -43,7 +43,7 @@ const LogIn = () => {
           <button
             className="submit_btn text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="submit"
-            onClick={handelSubmit}
+            onClick={(e) => handelSubmit(e)}
           >
             Done
           </button>
